@@ -16,3 +16,7 @@ So the tools included on this boilerplate are:
 - Moongose (to create the db connection)
 - MongoDB (to interact with the entries requests)
 - Bootstrap (to some very basic for UI elements and layout)
+
+
+<img src="https://github.com/elsolenllamas/express-handlebars-rest-mongo/blob/master/resources/crud-sshot.jpg" />
+<p>Screenshot showing CRUD Operations, Edit, Show, Delete and Add</p>
