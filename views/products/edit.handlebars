@@ -1,0 +1,25 @@
+	<div class="container">
+		<h3>ProductID {{product._id}}</h3>
+	</div>
+
+	<hr/>
+
+	<div class="container">
+		<form action="/products/{{product._id}}/edit" method="post" name="updateProduct" enctype="application/x-www-form-urlencoded">
+
+			<input id="inputName" type="text" value="{{product.name}}" name="name"/>
+
+			<input id="inputSize" type="number" value="{{product.size}}" name="size"/>
+
+			<select id="inputColor" name="color"/>
+				<option value="red">Red</option>
+				<option value="black">Black</option>
+				<option value="grey">Grey</option>
+			</select>
+
+			<input type="hidden" value="PUT" name="_method"/>
+
+			<button id="btnSubmit" type="submit" class="btn btn-primary">Update</button>
+
+		</form>
+	</div>
