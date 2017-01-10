@@ -1,0 +1,40 @@
+
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li><a href="/products">All</a></li>
+            <li><a href="/products/men">Men</a></li>
+            <li><a href="/products/woman">Woman</a></li>
+            <li><a href="/products/kids">Kids</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1> {{title}} </h1>
+    </div>
+    <hr/>
+    <div class="container">
+        {{#each products}}
+            <div class="col-xs-12 col-sm-3">
+                <ul class="list-group">
+                    <li class="list-group-item">{{this.name}}</li>
+                    <li class="list-group-item">{{this.category}}</li>
+                    <li class="list-group-item">{{this.size}}</li>
+                    <li class="list-group-item">{{this.color}}</li>
+                    <li class="list-group-item"><small>{{this._id}}</small></li>
+
+
+                    <form action="/products/{{this._id}}/edit" method="post" enctype="application/x-www-form-urlencoded">
+                        <input type="hidden" value="DELETE" name="_method"/>
+                        <button type="submit" class="btn btn-secondary"> Delete </button>
+                    </form>
+
+
+                    <a href="/products/{{this._id}}/edit"> Edit </a> |
+                    <a href="/products/{{this._id}}"> Show </a>
+                </ul>
+            </div>
+        {{/each}}
+    </div>
+    <hr/>
+    <div class="container">
+        <a href="products/new" class="btn btn-primary"> Add a new Product </a>
+    </div>
