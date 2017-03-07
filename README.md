@@ -1,5 +1,7 @@
 # express-handlebars-rest-mongo
 
+![](http://pixel-cookers.github.io/built-with-badges/handlebars/handlebars-short.png)
+
 The first thing you need to do, assuming you have mongo db running its create a new database.
 For this project mongoose try to connect to a db called "products" so you need to write 'use products' to create the db.
 
